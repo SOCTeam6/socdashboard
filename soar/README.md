@@ -19,7 +19,7 @@ The deployment runs Tracecat in production mode using Docker and Docker Compose.
 ### Create environment configuration
 - Clone the repository
 
-- Navigate to the `tracecat` folder in the terminal
+- Navigate to the `soar` folder in the terminal
 
 - Run `cp .env.example .env`
 
