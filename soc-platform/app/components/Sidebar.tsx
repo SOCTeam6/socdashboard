@@ -21,7 +21,7 @@ export default function Sidebar() {
         <div className="flex items-center gap-3">
           <Shield className="w-8 h-8 text-red-500" />
           <div>
-            <h1 className="text-xl font-bold text-white">ThreatPulse</h1>
+            <h1 className="text-xl font-bold text-white">Sentinel</h1>
             <p className="text-xs text-gray-400">SOC Platform</p>
           </div>
         </div>
