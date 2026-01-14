@@ -115,8 +115,8 @@ export default function Dashboard() {
           </div>
           <div>
             <p className="text-gray-400 mb-1">Repository:</p>
-            <a href="https://github.com/gregdavid1/WebSocNov" target="_blank" className="text-blue-400 hover:underline">
-              github.com/gregdavid1/WebSocNov
+            <a href="https://github.com/SOCTeam6/socdashboard" target="_blank" className="text-blue-400 hover:underline">
+              github.com/SOCTeam6/socdashboard
             </a>
           </div>
           <div>
