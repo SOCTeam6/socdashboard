@@ -245,7 +245,7 @@ export default function WazuhSIEMDashboard() {
       });
 
       if (response.ok) {
-        alert('✅ Successfully escalated to SOAR system!');
+        window.alert('✅ Successfully escalated to SOAR system!');
         
         // Update alert status
         if ('id' in alert && 'description' in alert) {
@@ -258,11 +258,11 @@ export default function WazuhSIEMDashboard() {
           ));
         }
       } else {
-        alert('⚠️ Failed to escalate to SOAR. Please check the connection.');
+        window.alert('⚠️ Failed to escalate to SOAR. Please check the connection.');
       }
     } catch (error) {
       console.error('SOAR escalation error:', error);
-      alert('❌ Error connecting to SOAR system. Please verify the SOAR endpoint is accessible.');
+      window.alert('❌ Error connecting to SOAR system. Please verify the SOAR endpoint is accessible.');
     }
   };
 
@@ -278,7 +278,7 @@ export default function WazuhSIEMDashboard() {
       affected_hosts: [alert.source]
     };
     setIncidents([newIncident, ...incidents]);
-    alert('✅ Incident created successfully');
+    window.alert('✅ Incident created successfully');
   };
 
   if (!isMounted) {
