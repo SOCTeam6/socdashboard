@@ -63,18 +63,11 @@ export default function SOARPage() {
             </div>
 
             <div className="flex gap-4">
-              <button
-                onClick={() => setShowIframe(true)}
-                className="flex-1 bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg font-medium transition-all flex items-center justify-center gap-2"
-              >
-                <Shield className="w-5 h-5" />
-                Open SOAR Dashboard
-              </button>
               <a
                 href="http://34.142.90.169/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg font-medium transition-all flex items-center justify-center gap-2"
+                className="flex-1 bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg font-medium transition-all flex items-center justify-center gap-2"
               >
                 <ExternalLink className="w-5 h-5" />
                 Open in New Tab
@@ -109,38 +102,46 @@ export default function SOARPage() {
         </div>
       )}
 
-      {/* Embedded SOAR */}
+      {/* Direct Access Info */}
       {showIframe && (
-        <div className="h-[calc(100vh-180px)]">
-          <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 mb-4 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-sm text-gray-300">Tracecat SOAR - Live System</span>
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gray-800 border border-purple-500 rounded-lg p-8">
+            <div className="text-center mb-6">
+              <Zap className="w-16 h-16 text-purple-400 mx-auto mb-4" />
+              <h2 className="text-2xl font-bold mb-2">Opening SOAR System</h2>
+              <p className="text-gray-400">
+                Due to security restrictions, the SOAR interface opens in a new tab.
+              </p>
             </div>
-            <div className="flex gap-2">
+
+            <div className="bg-gray-900 border border-gray-700 rounded-lg p-6 mb-6">
+              <h3 className="font-semibold mb-3 text-purple-400">Access Information:</h3>
+              <div className="space-y-2 text-sm text-gray-300">
+                <p>• The Tracecat SOAR system will open in a new browser tab</p>
+                <p>• You may need to log in with your SOAR credentials</p>
+                <p>• All escalated alerts from SIEM will appear in the workflow system</p>
+                <p>• Automated playbooks run on received incidents</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
               <a
                 href="http://34.142.90.169/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm transition-all flex items-center gap-2"
+                className="flex-1 bg-purple-600 hover:bg-purple-700 px-6 py-4 rounded-lg font-medium transition-all flex items-center justify-center gap-2 text-lg"
               >
-                <ExternalLink className="w-4 h-4" />
-                Open in New Tab
+                <ExternalLink className="w-6 h-6" />
+                Launch SOAR Platform
               </a>
               <button
                 onClick={() => setShowIframe(false)}
-                className="px-3 py-1 bg-red-600 hover:bg-red-700 rounded-lg text-sm transition-all"
+                className="bg-gray-700 hover:bg-gray-600 px-6 py-4 rounded-lg font-medium transition-all"
               >
-                Close
+                Back
               </button>
             </div>
           </div>
-          
-          <iframe
-            src="http://34.142.90.169/"
-            className="w-full h-full bg-white rounded-lg border border-gray-700"
-            title="Tracecat SOAR Platform"
-          />
         </div>
       )}
     </div>
