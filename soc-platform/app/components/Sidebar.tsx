@@ -1,27 +1,25 @@
 'use client';
-
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Shield, LayoutDashboard, Database, Zap, Activity, Ticket, LogOut } from 'lucide-react';
+import { Shield, LayoutDashboard, Database, Zap, Activity, LogOut } from 'lucide-react';
 
 const navItems = [
   { name: 'Dashboard', path: '/', icon: LayoutDashboard },
   { name: 'SIEM', path: '/siem', icon: Database },
   { name: 'SOAR', path: '/soar', icon: Zap },
   { name: 'EDR', path: '/edr', icon: Activity },
-  { name: 'ITSM', path: '/itsm', icon: Ticket },
 ];
 
 export default function Sidebar() {
   const pathname = usePathname();
-
+  
   return (
     <div className="w-64 bg-gray-950 border-r border-gray-800 flex flex-col">
       <div className="p-6 border-b border-gray-800">
         <div className="flex items-center gap-3">
           <Shield className="w-8 h-8 text-red-500" />
           <div>
-            <h1 className="text-xl font-bold text-white">Sentinel</h1>
+            <h1 className="text-xl font-bold text-white">Overwatch</h1>
             <p className="text-xs text-gray-400">SOC Platform</p>
           </div>
         </div>

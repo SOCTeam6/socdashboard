@@ -31,15 +31,6 @@ export default function Dashboard() {
       role: 'Automation',
       icon: AlertTriangle,
       color: 'purple'
-    },
-    {
-      name: 'ITSM',
-      path: '/itsm',
-      description: 'IT Service Management',
-      status: 'development',
-      role: 'Ticket Management',
-      icon: CheckCircle,
-      color: 'green'
     }
   ];
 
@@ -80,14 +71,13 @@ export default function Dashboard() {
       {/* SOC Tools Grid */}
       <div className="mb-8">
         <h2 className="text-2xl font-bold mb-4">SOC Components</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tools.map((tool) => {
             const Icon = tool.icon;
             const colorClasses = {
               blue: 'border-blue-500 hover:border-blue-400',
               red: 'border-red-500 hover:border-red-400',
-              purple: 'border-purple-500 hover:border-purple-400',
-              green: 'border-green-500 hover:border-green-400'
+              purple: 'border-purple-500 hover:border-purple-400'
             };
 
             return (
