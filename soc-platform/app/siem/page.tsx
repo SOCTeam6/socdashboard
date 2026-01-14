@@ -234,12 +234,11 @@ export default function WazuhSIEMDashboard() {
         message: 'title' in alert ? `Incident: ${alert.title}` : `Alert: ${alert.description}`
       };
 
-      // Send to SOAR
-      const response = await fetch('http://34.142.90.169/api/webhooks/wf_7Fq86B311b1xEiYRDJ52Uy/b1c9ab8719e2e63945f0fdc45b31f5db5d35965772ed294690062f70c94b5de0', {
+      // Send to SOAR via backend proxy
+      const response = await fetch('/api/soar', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'x-tracecat-api-key': 'tc_sk_7BN1f20ynwRu980EZGoBGZ3Zu3jzN0TR5CpgErFrJbJ'
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(payload)
       });
